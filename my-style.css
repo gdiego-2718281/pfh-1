@@ -1,0 +1,13 @@
+.red { color: red; }
+.green { color: green; }
+.white {color : white; }
+.yellow { color : #FCE205; }
+
+.mi_caja {
+  background-color: #3498db90;
+  border-left: 5px solid #2f4f4f;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

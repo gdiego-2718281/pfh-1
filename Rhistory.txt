@@ -1,0 +1,375 @@
+library(xaringanExtra)
+library(xaringan)
+library(xaringanthemer)
+library(icon)
+library(knitr)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+library(yaml)
+library(knitr)
+library(fontawesome)
+install.packages("DiagrammeR")
+library(DiagrammeR)
+options(htmltools.dir.version = FALSE)
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] -..-> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E>AMA] --(+)--> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E>AMA] --(+)--> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E >AMA] ==> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA] ==> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA] ==> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA]
+E ==> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA]
+E --> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA]
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E [AMA]
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E[AMA]
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph TB;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E[AMA]
+E --> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E[AMA]
+E --> F[[Biopsia Hepática]]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E[AMA]
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --+--> E[AMA]
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --+--> E[AMA]
+C --(-)--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --POS--> E[AMA]
+C --NEG--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E --> F[Biopsia Hepática]
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+C --> E[AMA]
+E --NEG--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E --POS--> F[Biopsia Hepática]
+E2 --SI--> G
+E2 --NO--> F
+G[Pruebas de imagen<br>TAC, colangio-RNM, CPRE]
+")
+library(xaringanthemer)
+style_mono_accent(header_font_google = google_font("Josefin Sans"))
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+options(htmltools.dir.version = FALSE)
+xaringanExtra::use_panelset()
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+create_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+create_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(xaringanthemer)
+style_mono_accent(header_font_google = google_font("Josefin Sans"))
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+options(htmltools.dir.version = FALSE)
+xaringanExtra::use_panelset()
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+render_graph(a_graph)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node(color = "red") |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node(color = "red") |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+a_graph <-
+create_graph() |>
+add_node(style = "filled", color = "red") |>
+add_node() |>
+add_edge(from = 1, to = 2)
+library(DiagrammeR)
+nodes <- create_node_df(n=4, style = "filled", color = "red", shape = "circle")
+my_graph <- create_graph(nodes_df = nodes)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+render_graph(a_graph)
+render_graph(my_graph)
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+D --> G
+C --> E[AMA]
+E --NEG--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E2 --NO--> F
+E --POS--> F[Biopsia Hepática]
+E2 --SI--> G
+G[Pruebas de imagen<br>TAC, colangio-RNM, CPRE]
+style E fill:#9C2
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+D --> G
+C --> E[AMA]
+E --NEG--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E2 --NO--> F
+E --POS--> F[Biopsia Hepática]
+E2 --SI--> G
+G[Pruebas de imagen<br>TAC, colangio-RNM, CPRE]
+style E fill:#9C2
+style C,D fill:#ADF
+")
+library(DiagrammeR)
+mermaid("
+graph LR;
+A[Revisar fármacos] --> B[Ecografia]
+B --> C(Vías Biliares no-dilatadas)
+B --> D(Vías Biliares Dilatadas)
+D --> G
+C --> E[AMA]
+E --NEG--> E2(Contexto clínico sugestivo<br>de colestasis extrahepática)
+E2 --NO--> F
+E --POS--> F[Biopsia Hepática]
+E2 --SI--> G
+G[Pruebas de imagen<br>TAC, colangio-RNM, CPRE]
+style E fill:#9C2
+style C fill:#ADF
+style D fill:#ADF
+")
+library(DiagrammeR)
+library(fontawesome)
+library(htmlwidgets)
+library(leaflet)
+library(rmarkdown)
+library(servr)
+library(utf8)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+library(yaml)
+library(knitr)
+xaringan::infinite_moon_reader()
+library(compiler)
+install.packages("RMark")
+library(tinytex)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+xaringanExtra::use_tachyons()
+xaringanExtra::use_panelset()
+library(htmltools)
+library(htmlwidgets)
+library(knitr)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+xaringan:::inf_mr()
+library(DiagrammeR)
+nodes <- create_node_df(n=4, style = "filled", color = "red", shape = "circle")
+my_graph <- create_graph(nodes_df = nodes)
+a_graph <-
+create_graph() |>
+add_node() |>
+add_node() |>
+add_edge(from = 1, to = 2)
+render_graph(a_graph)
+render_graph(my_graph)
+library(fontawesome)
+library(ggplot2)
+install.packages("ggplot2")
+library(ggplot2)
+library(shiny)
+library(tinytex)
+library(xaringanExtra)
+library(xaringan)
+library(yaml)
+xaringanExtra::use_tachyons()
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+xaringanExtra::use_panelset()
+xfun::session_info("xaringan")
+library(servr)
+xfun::session_info("xaringan")
+rmarkdown::pandoc_version()
+options(htmltools.preserve.raw = FALSE)
+remotes::install_github("yihui/xaringan")
+install.packages("remotes")
+library(remotes)
+remotes::install_github("yihui/xaringan")
+detach("package:xaringan", unload = TRUE)
+remotes::install_github("yihui/xaringan")
+library(xaringan)
